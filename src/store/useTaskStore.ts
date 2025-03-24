@@ -17,7 +17,10 @@ interface TaskState {
     updateTask: (id: number, updates: Partial<Task>) => Promise<void>;
 }
 
-const API_URL = 'http://localhost:5000';
+// Use relative URL in production (Vercel) and localhost in development
+const API_URL = process.env.NODE_ENV === 'production' 
+    ? '/api' 
+    : 'http://localhost:5000';
 
 export const useTaskStore = create<TaskState>((set) => ({
     task: [],
