@@ -1,0 +1,95 @@
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.app-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+body.dark .app-nav {
+  background-color: #1e1e1e;
+  border-bottom: 1px solid #333;
+}
+
+body.light .app-nav {
+  background-color: #ffffff;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.nav-logo {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-link {
+  text-decoration: none;
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+body.dark .nav-link {
+  color: #e0e0e0;
+}
+
+body.light .nav-link {
+  color: #333;
+}
+
+.nav-link:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+body.dark .nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.app-content {
+  flex: 1;
+  padding: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.page-container {
+  min-height: 100vh;
+  padding: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.page-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.page-title {
+  margin: 0;
+}
+
+body.dark .page-container {
+  background-color: #121212;
+}
+
+body.light .page-container {
+  background-color: #f0f2f5;
+} 
